@@ -1,0 +1,21 @@
+<form #phoneNumberForm="ngForm"
+      [formGroup]="phoneForm">
+    <ngx-pure-intl-tel [preferredCountries]="preferredCountries"
+                       [enableAutoCountrySelect]="true"
+                       [enablePlaceholder]="false"
+                       [placeholder]="'شماره موبایل را وارد کنید'"
+                       [searchCountryPlaceholder]="''"
+                       [searchCountryFlag]="true"
+                       [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+                       [selectFirstCountry]="false"
+                       [selectedCountryISO]="CountryISO.Iran"
+                       [maxLength]="'15'"
+                       (phoneNumberChange)="phoneNumberChange($event)"
+                       [phoneValidation]="true"
+                       [separateDialCode]="true"
+                       [cssClass]="'custom-phone-number'"
+                       name="phone"
+                       [phoneNumber]="phoneNumber"
+                       formControlName="phone">
+    </ngx-pure-intl-tel>
+</form>

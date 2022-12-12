@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center">
+  <input *ngFor="let item of _codesArray;let i = index"
+         type="number"
+         id="{{_inputName + i}}"
+         class="input-code"
+         tabindex="{{i+1}}"
+         autofocus
+         [(ngModel)]="_codes[i]"
+         (input)="onInput($event,i)"
+         (focus)="onFocus($event)"
+         (keydown.backspace)="onBackspaceKey($event,i)" />
+</div>
+<div class="d-flex justify-content-between mt-3 mx-4"
+     [class.justify-content-between]="isEditNumber"
+     [class.justify-content-center]="!isEditNumber">
+
+  <p class="">
+    <app-timer class="f-16 green-color" (onExpire)="onExpireTimer()"></app-timer>    
+  </p>
+  
+  <h6 *ngIf="isEditNumber" class="f-16 orange-color pointer" (click)="editNumber()">ویرایش شماره</h6>
+</div>

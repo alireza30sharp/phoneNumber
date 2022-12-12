@@ -1,0 +1,14 @@
+{
+  "name": "ngx-pure-intl-tel",
+  "version": "0.0.5",
+  "peerDependencies": {
+    "google-libphonenumber": "^3.2.3"
+  },
+  "author": {
+    "name": "ehsanlotfi",
+    "email": "lotfiniamail@gmail.com"
+  },
+  "devDependencies": {
+    "@types/google-libphonenumber": "^7.4.17"
+  }
+}

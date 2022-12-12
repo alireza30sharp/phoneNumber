@@ -1,0 +1,125 @@
+.iti {
+  input {
+    width: calc( 100% - 105px );
+    height: 44px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    border-radius: unset;
+    font-size: 25px;
+    box-shadow: none;
+    padding-left: 0 !important;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
+
+.iti__flag-container {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: unset;
+}
+
+.iti__flag-container.open + input {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.iti__country {
+  cursor: pointer;
+}
+
+li.iti__country:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.iti__selected-flag {
+  padding: 0 0 0 12px;
+  white-space: nowrap;
+}
+
+.iti__flag-container.disabled {
+  cursor: default !important;
+}
+
+.iti.iti--allow-dropdown .flag-container.disabled:hover .iti__selected-flag {
+  background: none;
+}
+
+.country-dropdown {
+  width: 100%;
+  margin-top: -1px;
+  border: 1px solid #d3d3d3;
+  box-shadow: 0 10px 15px -5px rgb(0, 0, 0, .15);
+  overflow: hidden;
+}
+
+.search-container {
+  position: relative;
+
+  input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+    font-size: 14px;
+    border-radius: 0;
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.search-icon {
+  position: absolute;
+  z-index: 2;
+  width: 25px;
+  margin: 1px 10px;
+}
+
+.iti__country-list {
+  position: relative;
+  border: none;
+  margin: 0;
+  font-size: 14px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.iti input#country-search-box {
+  padding-left: 6px;
+}
+
+.iti .selected-dial-code {
+  margin-left: 6px;
+  font-size: 14px;
+}
+
+.iti.separate-dial-code .iti__selected-flag,
+.iti.separate-dial-code.iti--allow-dropdown.iti-sdc-2 .iti__selected-flag,
+.iti.separate-dial-code.iti--allow-dropdown.iti-sdc-3 .iti__selected-flag,
+.iti.separate-dial-code.iti--allow-dropdown.iti-sdc-4 .iti__selected-flag {
+  width: 93px;
+}
+
+.iti.separate-dial-code input,
+.iti.separate-dial-code.iti--allow-dropdown.iti-sdc-2 input,
+.iti.separate-dial-code.iti--allow-dropdown.iti-sdc-3 input,
+.iti.separate-dial-code.iti--allow-dropdown.iti-sdc-4 input {
+  margin-left: 105px;
+}
+
+.pos-absolute {
+  position: absolute;
+}
